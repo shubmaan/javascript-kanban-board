@@ -22,6 +22,15 @@ html,body{
     /* btn */
     --primary-btn-bg-color: #F00004;
 
+    /* border-radius */
+    --radius-none: 0;
+    --radius-xs: 0.125rem;  /* 2px */
+    --radius-sm: 0.25rem;   /* 4px */
+    --radius-md: 0.5rem;    /* 8px */
+    --radius-lg: 0.75rem;   /* 12px */
+    --radius-xl: 1rem;      /* 16px */
+    --radius-2xl: 1.5rem;   /* 24px */
+    --radius-3xl: 2rem;     /* 32px */
 
 
     /* space variables */
@@ -57,7 +66,7 @@ body{
     background-color: var(--primary-btn-bg-color);
     border:  none;
     outline: none;
-    border-radius: var(--space-sm);
+    border-radius: var(--radius-lg);
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
     transition: transform 0.2s ease-in-out;
     cursor: pointer;
