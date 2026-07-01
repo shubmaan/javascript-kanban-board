@@ -4,11 +4,27 @@
     box-sizing: border-box;
 }
 
+
+html,body{
+    height: 100%;
+    width: 100%;
+
+}
+
 :root{
     /* Backgrounds */
-    ---primary-bg-color:#1f0021
+    --primary-bg-color: #1f0021;
 
-        /* space variables */
+    /* text color */
+    --text-primary: #f8f5ff;
+
+
+    /* btn */
+    --primary-btn-bg-color: #F00004;
+
+
+
+    /* space variables */
 
     --space-xs: 0.25rem; /* 4px */
     --space-sm: 0.5rem; /* 8px */
@@ -19,8 +35,47 @@
     --space-3xl: 3rem; /* 48px */
 }
 
-html,body{
-    height: 100%;
-    width: 100%;
-    background-color:var(---primary-bg-color) ;
+body{
+    background-color:var(--primary-bg-color) ;
+}
+#navBar{
+    height: var(--space-3xl);
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-bg-color);
+}
+
+.rightNavDiv, .leftNavDiv{
+    color: var(--text-primary);
+    margin: var(--space-lg);
+    
+}
+
+.btn{
+    background-color: var(--primary-btn-bg-color);
+    border:  none;
+    outline: none;
+    border-radius: var(--space-sm);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+    color: var(--text-primary);
+}
+
+.btn:hover {
+    transform: scale(0.95);
+}
+
+.btn:active {
+    transform: scale(1);
+}
+#addNewTaskBtn{
+    padding: 0.5rem;
+    
+}
+
+.leftNavDiv{
+    font-size: 2rem;
 }
