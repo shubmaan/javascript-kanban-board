@@ -15,12 +15,12 @@
                 </div>
             </nav>
             <section class="hero">
-                <div class="colums to-do">
+                <div class="columns to-do">
                     <div class="heading">
                         <div class="left">To-Do</div>
-                        <div class="right">Count</div>
+                        <div class="right" id="allTask-toDo-count">0</div>
                     </div>
-                    <div class="allTask">
+                    <div class="allTask allTask-toDo">
                         <div draggable="true" class="task">
                             <h2 class="title">Task1</h2>
                             <p class="discraption">this is task</p>
@@ -28,17 +28,19 @@
                         </div>
                     </div>
                 </div>
-                <div class="colums in-progress">
+                <div class="columns in-progress">
                     <div class="heading">
                         <div class="left">In-Progress</div>
-                        <div class="right">Count</div>
+                        <div class="right" id="allTask-InProgress-count">0</div>
                     </div>
+                    <div class="allTask allTask-InProgress"></div>
                 </div>
-                <div class="colums done">
+                <div class="columns done">
                     <div class="heading">
                         <div class="left">Done</div>
-                        <div class="right">Count</div>
+                        <div class="right" id="allTask-done-count">0</div>
                     </div>
+                    <div class="allTask allTask-done"></div>
                 </div>
             </section>
         </main>

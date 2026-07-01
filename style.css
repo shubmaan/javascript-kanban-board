@@ -15,7 +15,7 @@ html,body{
     /* Backgrounds */
     --primary-bg-color: #130007;
     --secondary-bg-color: #380116;
-    --colums-heading-bg-color:#4b011d;
+    --columns-heading-bg-color:#4b011d;
     
 
     /* text color */
@@ -91,7 +91,7 @@ body{
     font-size: 2rem;
 }
 
-.colums{
+.columns{
 
     height: 35rem;
     width: 25rem;
@@ -115,7 +115,7 @@ body{
     left: 0;
     width: 100%;
     height: var(--space-lg);
-    background-color: var(--colums-heading-bg-color);
+    background-color: var(--columns-heading-bg-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -148,7 +148,8 @@ body{
     cursor: grab;
     overflow-wrap: break-word;
     word-wrap: break-word;
-
+    user-select: none;
+    -webkit-user-drag: element;
 }
 
 .delBtn{
