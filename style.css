@@ -13,7 +13,10 @@ html,body{
 
 :root{
     /* Backgrounds */
-    --primary-bg-color: #1f0021;
+    --primary-bg-color: #130007;
+    --secondary-bg-color: #380116;
+    --colums-heading-bg-color:#4b011d;
+    
 
     /* text color */
     --text-primary: #f8f5ff;
@@ -23,7 +26,6 @@ html,body{
     --primary-btn-bg-color: #F00004;
 
     /* border-radius */
-    --radius-none: 0;
     --radius-xs: 0.125rem;  /* 2px */
     --radius-sm: 0.25rem;   /* 4px */
     --radius-md: 0.5rem;    /* 8px */
@@ -66,7 +68,7 @@ body{
     background-color: var(--primary-btn-bg-color);
     border:  none;
     outline: none;
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius-md);
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
     transition: transform 0.2s ease-in-out;
     cursor: pointer;
@@ -87,4 +89,75 @@ body{
 
 .leftNavDiv{
     font-size: 2rem;
+}
+
+.colums{
+
+    height: 35rem;
+    width: 25rem;
+    background-color: var(--secondary-bg-color);
+    padding: 1rem;
+    border-radius: var(--radius-md);
+    color: var(--text-primary);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    position: relative;
+    transition: transform 0.2s ease-in-out;
+}
+
+.hero{
+    display: flex;
+    justify-content: space-around;
+}
+
+.heading{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--space-lg);
+    background-color: var(--colums-heading-bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+}
+
+.left,.right{
+    margin: var(--space-sm);
+}
+
+.allTask{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-md);
+    margin-top: var(--space-lg);;
+    width: 100%;
+
+    
+}
+
+.task{
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--radius-md);
+    width: 100%;
+    height: auto;
+    padding: var(--space-xs);
+    background-color: #5d0124;
+    cursor: grab;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+
+}
+
+.delBtn{
+    width: 4rem;
+    padding: var(--space-xs);
+    align-self: flex-end;
+}
+
+.drag{
+    transform: scale(1.05);
+    
 }
