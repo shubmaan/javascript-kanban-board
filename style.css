@@ -16,6 +16,7 @@ html,body{
     --primary-bg-color: #130007;
     --secondary-bg-color: #380116;
     --columns-heading-bg-color:#4b011d;
+    --color-bg-tertiary:#5d0124;
     
 
     /* text color */
@@ -48,6 +49,7 @@ html,body{
 
 body{
     background-color:var(--primary-bg-color) ;
+    color: var(--text-primary);
 }
 #navBar{
     height: var(--space-3xl);
@@ -59,7 +61,7 @@ body{
 }
 
 .rightNavDiv, .leftNavDiv{
-    color: var(--text-primary);
+    
     margin: var(--space-lg);
     
 }
@@ -72,7 +74,7 @@ body{
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
     transition: transform 0.2s ease-in-out;
     cursor: pointer;
-    color: var(--text-primary);
+    
 }
 
 .btn:hover {
@@ -96,9 +98,11 @@ body{
     height: 35rem;
     width: 25rem;
     background-color: var(--secondary-bg-color);
-    padding: 1rem;
+    padding: var(--space-md);
     border-radius: var(--radius-md);
-    color: var(--text-primary);
+    overflow-y: auto;
+    scrollbar-width: none;
+    
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
     position: relative;
     transition: transform 0.2s ease-in-out;
@@ -110,10 +114,13 @@ body{
 }
 
 .heading{
-    position: absolute;
+    position: sticky;
+    z-index: 5;
     top: 0;
     left: 0;
+    right: 0;
     width: 100%;
+
     height: var(--space-lg);
     background-color: var(--columns-heading-bg-color);
     display: flex;
@@ -144,7 +151,7 @@ body{
     width: 100%;
     height: auto;
     padding: var(--space-xs);
-    background-color: #5d0124;
+    background-color: var(--color-bg-tertiary);
     cursor: grab;
     overflow-wrap: break-word;
     word-wrap: break-word;
@@ -161,4 +168,89 @@ body{
 .drag{
     transform: scale(1.05);
     
+}
+
+.addNewTaskPage{
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(5px);
+    background-color: #1300077f;;
+    height: 100%;
+    width: 100%;
+    display: none;
+    
+
+}
+
+.addNewTask{
+
+    position: relative;
+    z-index: 20;
+    display: flex;  
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-lg);
+    height: auto;
+    width: 20rem;
+    background-color: var(--columns-heading-bg-color);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    border-radius: var(--radius-xl);
+    
+
+}
+
+#addNewTaskTop{
+    text-align: center;
+    margin: var(--space-sm);
+    width: 100%;
+    height: auto;
+}
+
+#addNewTaskPageBtns{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    
+
+    width: 100%;
+    height: auto;
+
+}
+.addNewTaskPageBtn{
+    color: var(--text-primary);
+    width:  4rem;
+    margin: var(--space-sm);
+    padding: var(--space-sm);
+}
+
+
+#inputArea{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    justify-content: center;
+    align-items: center;
+
+}
+
+.inputBar{
+    border: none;
+    outline: none;
+    padding: var(--space-sm);
+    width: 80%;
+    min-height: 2.5rem;
+    line-height: 1.5;
+    border-radius: var(--radius-md);
+    font-style: italic;
+    overflow-y: auto;
+    
+}
+.inputBar::placeholder{
+    font-style: italic;
 }
