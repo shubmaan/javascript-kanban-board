@@ -58,6 +58,7 @@ body{
     justify-content: space-between;
     align-items: center;
     background-color: var(--primary-bg-color);
+    user-select: none;
 }
 
 .rightNavDiv, .leftNavDiv{
@@ -75,6 +76,7 @@ body{
     transition: transform 0.2s ease-in-out;
     cursor: pointer;
     color: var(--text-primary);
+    user-select: none;
     
 }
 
@@ -128,6 +130,7 @@ body{
     justify-content: space-between;
     align-items: center;
     border-radius: var(--radius-md) var(--radius-md) 0 0;
+    user-select: none;
 }
 
 .left,.right{
